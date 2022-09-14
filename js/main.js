@@ -6,6 +6,9 @@ const products = [
 ];
 //Функция для формирования верстки каждого товара
 //Добавить в выводе изображение
+
+
+/** Функция добавляет разметку в html, полученнуюю на основании массива */
 const renderProduct = (el) => {
     return `<div class="product-item">
                 <div class="img">
@@ -16,6 +19,14 @@ const renderProduct = (el) => {
                 <button class="buy-btn">Купить</button>
             </div>`
 };
+
+
+/**
+ * Функция преобразует массив через map и возвращает его в функцию, которая
+ * добавляет разметку html
+ * @param {any} item=>renderProduct(item
+ * @returns {any}
+ */
 const renderPage = list => {
     const productsList = list.map(item => renderProduct(item));
     console.log(productsList);
@@ -23,3 +34,5 @@ const renderPage = list => {
 };
 
 renderPage(products);
+
+// простите, не удержался добавить к элементам массива персональные изображения))
